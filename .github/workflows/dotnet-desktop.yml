@@ -19,9 +19,15 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '10.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore InterpraticVPKNuGet.csproj
+
+    - name: Build Project
+      run: dotnet build InterpraticVPKNuGet.csproj --configuration Release --no-restore
         
     - name: Build and Pack
-      run: dotnet pack InterpraticVPKNuGet.csproj --configuration Release --output ./nupkg
+      run: dotnet pack InterpraticVPKNuGet.csproj --configuration Release --no-build --output ./nupkg
       
     - name: Publish to NuGet.org
       run: dotnet nuget push ./nupkg/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
