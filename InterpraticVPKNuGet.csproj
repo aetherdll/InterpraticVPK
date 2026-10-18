@@ -9,11 +9,11 @@
 		<!-- NuGet Package Metadata -->
 		<PackageId>InterpraticVPK</PackageId>
 		<Version>1.0.0</Version>
-		<Authors>YourName</Authors>
+		<Authors>Aether</Authors>
 		<Company>Interpratic</Company>
 		<Description>A fast, modern .NET 10.0 library for reading, extracting, and packing Valve VPK archives.</Description>
 		<PackageTags>vpk;valve;source;pak;packer;extractor;net10;game-assets</PackageTags>
-		<RepositoryUrl>https://github.com/yourusername/InterpraticVPK</RepositoryUrl>
+		<RepositoryUrl>https://github.com/aetherdll/InterpraticVPK</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 
 		<!-- Automatic package generation on build -->
