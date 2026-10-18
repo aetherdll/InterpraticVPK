@@ -20,13 +20,10 @@ jobs:
       with:
         dotnet-version: '10.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore InterpraticVPKNuGet.csproj
-
     - name: Build Project
-      run: dotnet build InterpraticVPKNuGet.csproj --configuration Release --no-restore
+      run: dotnet build InterpraticVPKNuGet.csproj --configuration Release
         
-    - name: Build and Pack
+    - name: Pack Project
       run: dotnet pack InterpraticVPKNuGet.csproj --configuration Release --no-build --output ./nupkg
       
     - name: Publish to NuGet.org
