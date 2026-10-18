@@ -21,7 +21,7 @@ jobs:
         dotnet-version: '10.0.x'
         
     - name: Build and Pack
-      run: dotnet pack InterpraticVPK.csproj --configuration Release --output ./nupkg
+      run: dotnet pack InterpraticVPKNuGet.csproj --configuration Release --output ./nupkg
       
     - name: Publish to NuGet.org
       run: dotnet nuget push ./nupkg/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
