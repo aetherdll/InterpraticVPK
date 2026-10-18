@@ -21,8 +21,7 @@ jobs:
         dotnet-version: '10.0.x'
         
     - name: Build and Pack
-      run: dotnet pack --configuration Release --output ./nupkg
+      run: dotnet pack --configuration Release
       
     - name: Publish to NuGet.org
-      run: |
-        dotnet nuget push ./nupkg/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json
